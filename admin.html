@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Ekipmanları Yönetim Paneli</title>
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="admin-panel">
+        <div class="sidebar">
+            <h1>Yönetim Paneli</h1>
+            <div class="user-stats">
+                <p>Aktif Kullanıcı Sayısı: <span id="activeUsers">500</span></p>
+            </div>
+
+        <div class="end">
+            <a href="index.html">
+                <p>Çıkış yap</p>
+            </a>
+        </div>
+        
+        </div>
+        <div class="content">
+            <h2>Anasayfa</h2>
+             <div class="chart-container">
+                <canvas id="userChangeChart" class="chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="monthlyRevenueChart" class="chart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="inventoryChart" class="chart"></canvas>
+            </div>
+           
+            <div class="chart-container">
+                <canvas id="salesChart" class="chart"></canvas>
+            </div>
+            <div id="iade" class="chart-container">
+                <canvas id="orderReturnsChart" class="chart"></canvas>
+            </div>
+            
+            <div class="tables">
+                <table class="table">
+                    <tr>
+                        <th>Kategori</th>
+                        <th>Ürün Sayısı</th>
+                        <th>Stok Durumu</th>
+                    </tr>
+                    <tr>
+                        <td>Makineler</td>
+                        <td>150</td>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <td>Lensler</td>
+                        <td>200</td>
+                        <td>42</td>
+                    </tr>
+                    <tr>
+                        <td>Aksesuarlar</td>
+                        <td>300</td>
+                        <td>88</td>
+                    </tr>
+                    <tr>
+                        <td>Drone</td>
+                        <td>70</td>
+                        <td>55</td>
+                    </tr>
+                    <tr>
+                        <td>Işık ve Stüdyo Ekipmanları</td>
+                        <td>184</td>
+                        <td>108</td>
+                    </tr>
+
+                </table>
+                <table class="table">
+                    <tr>
+                        <th>Tarih</th>
+                        <th>Kullanıcı Sayısı</th>
+                        <th>Sipariş Sayısı</th>
+                        <th>İade Sayısı</th>
+                    </tr>
+                    <tr>
+                        <td>Ocak</td>
+                        <td>2500</td>
+                        <td>120</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Şubat</td>
+                        <td>2800</td>
+                        <td>135</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Mart</td>
+                        <td>3200</td>
+                        <td>150</td>
+                        <td>15</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Satış, stok, aylık kazanç ve sipariş-iade verileri
+        const salesData = {
+            labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'],
+            datasets: [{
+                label: 'Satışlar',
+                data: [50, 75, 60, 85, 70],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const monthlyRevenueData = {
+            labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'],
+            datasets: [{
+                label: 'Aylık Kazanç',
+                data: [3000, 2500, 3500, 2800, 3200],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const inventoryData = {
+            labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'],
+            datasets: [{
+                label: 'Stok',
+                data: [100, 80, 70, 50, 40],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const orderReturnsData = {
+            labels: ['Sipariş', 'İade'],
+            datasets: [{
+                data: [250, 33],
+                backgroundColor: ['#2ECC71', '#BDC3C7'],
+            }]
+        };
+
+        // Aktif kullanıcı sayısını güncelle
+        setInterval(function () {
+        const activeUsers = document.getElementById('activeUsers');
+        activeUsers.textContent = Math.floor(Math.random() * 500 + 300) ;
+        }, 3500);
+
+
+        // Satış grafiği
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'line',
+            data: salesData,
+        });
+
+        // Aylık kazanç grafiği
+        const monthlyRevenueCtx = document.getElementById('monthlyRevenueChart').getContext('2d');
+        const monthlyRevenueChart = new Chart(monthlyRevenueCtx, {
+            type: 'bar',
+            data: monthlyRevenueData,
+        });
+
+        // Stok grafiği
+        const inventoryCtx = document.getElementById('inventoryChart').getContext('2d');
+        const inventoryChart = new Chart(inventoryCtx, {
+            type: 'bar',
+            data: inventoryData,
+        });
+
+        // Sipariş ve İade grafiği
+        const orderReturnsCtx = document.getElementById('orderReturnsChart').getContext('2d');
+        const orderReturnsChart = new Chart(orderReturnsCtx, {
+            type: 'doughnut',
+            data: orderReturnsData,
+        });
+        // Üye sayısı değişim verileri
+        const userChangeData = {
+        labels: ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'],
+         datasets: [{
+        label: 'Üye Sayısı Değişimi',
+        data: [500, 720, 890, 992, 1190], // Üye sayısındaki değişiklikleri burada tanımlayın
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+        }]
+        };
+
+        // Üye sayısı değişim grafiği
+        const userChangeCtx = document.getElementById('userChangeChart').getContext('2d');
+        const userChangeChart = new Chart(userChangeCtx, {
+        type: 'line',
+        data: userChangeData,
+        });
+
+    </script>
+</body>
+</html>
+

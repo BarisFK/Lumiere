@@ -1,0 +1,139 @@
+/* Temel stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-panel {
+    display: flex;
+}
+
+.end{
+    background-color: red;
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+    border-radius: 25%;
+    
+}
+.end:hover{
+    transition: 0.5s;
+    transform: scale(1.15);
+}
+.end>a{
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+
+.sidebar {
+    background: #2c3e50;
+    color: #ecf0f1;
+    width: 250px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-stats {
+    margin-bottom: 20px; 
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ECC71; /* Renk seçimi */
+    color: #fff;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.user-stats p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+.user-stats:hover {
+    transform: scale(1.15);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Grafiklerin stili */
+.chart-container {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.chart-container:hover {
+    transform: scale(1.02);
+}
+
+.chart {
+    max-width: 100%;
+}
+
+/* Tablo stil */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#iade{
+    max-width: 35%;
+}
+
+/* Responsive tasarım */
+@media screen and (max-width: 768px) {
+    .admin-panel {
+        flex-direction: column;
+    }
+
+    .chart-container {
+        width: 100%;
+    }
+}
