@@ -104,7 +104,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!---->
 				</div>
 			</div>
-			
+			<div class="search">
+				<!-- open/close -->
+				<div class="overlay overlay-door">
+					<button type="button" class="overlay-close">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
+					<form action="#" method="post" class="d-flex">
+						<input class="form-control" type="search" placeholder="Search here..." required="">
+						<button type="submit" class="btn btn-primary submit">
+							<i class="fas fa-search"></i>
+						</button>
+					</form>
+
+				</div>
+				<!-- open/close -->
+			</div>
 			<label class="top-log mx-auto"></label>
 			<nav class="navbar navbar-expand-lg navbar-light bg-light top-header mb-2">
 
@@ -114,7 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 					</span>
 				</button>
-				<div id="menu"	 class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav nav-mega mx-auto">
 						<li class="nav-item active">
 							<a class="nav-link ml-lg-0" href="index.html" style="color: grey;">Anasayfa
@@ -202,58 +217,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!--//banner -->
 	</div>
 	<!--// header_top -->
-	<!--/404-->
-	<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
-		<div class="container-fluid">
-			<div class="error_page">
-				<h4>404</h4>
-				<p>Hatalı adres</p>
-				<form action="#" method="post">
-					<input class="serch" type="search" name="serch" placeholder="Ara..." required="">
-					<button class="btn1">
-						<i class="fa fa-search" aria-hidden="true"></i>
-					</button>
-					<div class="clearfix"> </div>
-				</form>
-				<ul class="footer-social text-center mt-lg-4 mt-3">
 
-					<li class="mx-2">
-						<a href="#">
-							<span class="fab fa-facebook-f"></span>
-						</a>
-					</li>
-					<li class="mx-2">
-						<a href="#">
-							<span class="fab fa-twitter"></span>
-						</a>
-					</li>
-					<li class="mx-2">
-						<a href="#">
-							<span class="fab fa-google-plus-g"></span>
-						</a>
-					</li>
-					<li class="mx-2">
-						<a href="#">
-							<span class="fab fa-linkedin-in"></span>
-						</a>
-					</li>
-					<li class="mx-2">
-						<a href="#">
-							<span class="fas fa-rss"></span>
-						</a>
-					</li>
-					<li class="mx-2">
-						<a href="#">
-							<span class="fab fa-vk"></span>
-						</a>
-					</li>
-				</ul>
-				<a class="b-home" href="index.html">Anasayfaya Dön</a>
+	<section class="campaigns">
+		<div class="container">
+			<h2 class="section-title">Duyurular</h2>
+	
+			<div class="campaigns-container">
+				<!-- Kampanya 1 -->
+				<div class="campaign-item">
+					<img src="images/duyuru.png" alt="Kampanya 1">
+					<div class="campaign-content">
+						<p class="campaign-description">Fotomaraton Beyoğlu'nu keşfet</p>
+						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+					</div>
+				</div>
+				<!-- Kampanya 2 -->
+				<div id="duyuru" class="campaign-item">
+					<img src="images/duyuru4.png" alt="Kampanya 2">
+					<div class="campaign-content">
+						<p class="campaign-description">Başka bir kısa metin açıklaması burada olacak.</p>
+						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+					</div>
+				</div>
+	
+				<!-- Kampanya 3 -->
+				<div id="duyuru" class="campaign-item ">
+					<img src="images/duyuru3.png" alt="Kampanya 3">
+					<div class="campaign-content">
+						<p class="campaign-description">Üçüncü kampanya metin açıklaması.</p>
+						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+					</div>
+				</div>
+	
+				<!-- Kampanya 4 -->
+				<div id="duyuru" class="campaign-item">
+					<img src="images/duyuru2.png" alt="Kampanya 4">
+					<div class="campaign-content">
+						<p class="campaign-description">Dördüncü kampanya metin açıklaması.</p>
+						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+					</div>
+				</div>
 			</div>
-
 		</div>
 	</section>
-	<!--//404-->
+
 	<!--footer -->
 	<footer class="py-lg-5 py-3">
 		<div class="container-fluid px-lg-5 px-3">
@@ -402,20 +409,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<!-- carousel -->
 	<!-- dropdown nav -->
-	<script>
-		$(document).ready(function () {
-			$(".dropdown").hover(
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
-					$(this).toggleClass('open');
-				},
-				function () {
-					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
-					$(this).toggleClass('open');
-				}
-			);
-		});
-	</script>
+	
 	<!-- //dropdown nav -->
 	<script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
