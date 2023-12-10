@@ -1,14 +1,14 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 
 
 #duyuru>img{
     max-width:65%;
 }
+#audioPlayer {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Duyurular - kampanyalar*/
 .campaigns {
     padding: 50px 0;
     text-align: center;
@@ -29,21 +29,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     background-color: #4848484a;
     border-radius: 50px;
     position: relative;
-    width: 85%; /* İki öğeyi yan yana sıralamak için genişliği ayarla */
-    margin-bottom: 40px; /* Aralarında daha fazla boşluk bırak */
+    width: 85%; 
+    margin-bottom: 40px; 
     overflow: hidden;
 }
 .campaign-item img {
     max-width: 60%;
     height: auto;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
 }
 
 .campaign-item:hover img {
-    transform: scale(1.4); /* Fotoğrafı biraz büyüt */
-    filter: blur(4px); /* Üzerine gelince fotoğrafı blurla */
+    transform: scale(1.4); 
+    filter: blur(4px); 
 }
 .campaign-item::before {
     content: '';
@@ -70,16 +69,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     width: 100%;
     padding: 15px;
     color: white;
-    font-size: large; /* Yazı rengi */
+    font-size: large; 
     font-weight: bold;
     z-index: 2;
-    opacity: 0; /* Başlangıçta yazıyı gizle */
+    opacity: 0; 
 }
 .campaign-item:hover .campaign-content {
-    opacity: 1; /* Üzerine gelince yazıyı göster */
+    opacity: 1; 
 }
 
-/* Arka planı blurlu gri yap */
+
 .campaign-content::before {
     content: '';
     position: absolute;
@@ -100,7 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 .campaign-description {
     margin-top: 15px;
-    color: #fff; /* Yazı rengi beyaz */
+    color: #fff; 
 }
 
 .btn-primary {
@@ -121,10 +120,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         background-color: #068628;
     }
 
-    /* Add this CSS to your stylesheet or in a <style> tag in your HTML document */
+ 
 
     #navbarSupportedContent {
-        padding: 1px; /* Add padding for spacing */
+        padding: 1px; 
     }
     #navbarSupportedContent>ul{
        display: flex;
@@ -137,24 +136,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         border-style: dashed;
         border-radius: 50px;
         border-color: #6666668d;
-        background-color: #ffffff; /* Set the background color for the navigation items */
+        background-color: #ffffff; 
     }
 
     .nav-link {
-        color: #ffffff; /* White text color */
+        color: #ffffff;
     }
 
 
     .dropdown-menu {
-        background-color: #f2f2f2; /* Set the background color for the dropdown menu */
+        background-color: #f2f2f2; 
     }
 
     .tittle-w3layouts-sub {
-        color: #fffefe; /* Dark grey title color */
+        color: #fffefe; 
     }
 
     .img-fluid {
-        max-width: 100%; /* Ensure images don't overflow their containers */
+        max-width: 100%; 
         height: auto;
     }
 
@@ -163,20 +162,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  /* Pop-up kutusunun stilini belirle */
  .popup {
     position: fixed;
-    bottom: 0; /* Pop-up'ın alt kısmını görünür yapmak için 0 olarak ayarlayın */
+    bottom: 0; 
     width: 200px;
     border-radius: 5px;
     padding: 0px;
     text-align: center;
     z-index: 9999;
     overflow: hidden;
-    transition: height 0.5s; /* Geçiş efekti eklemek için */
+    transition: height 0.5s; 
     }
 
 /* Görüntünün stilini belirle */
 .popup img {
     max-width: 60%;
-    max-height: 50%; /* Görüntünün yüksekliğini yarıya indirin */
+    max-height: 50%; 
 }
 
 /* Canlı destek metin kutusu için stil */

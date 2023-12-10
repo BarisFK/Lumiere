@@ -32,6 +32,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
 	    rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -227,16 +231,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="campaign-item">
 					<img src="images/duyuru.png" alt="Kampanya 1">
 					<div class="campaign-content">
-						<p class="campaign-description">Fotomaraton Beyoğlu'nu keşfet</p>
-						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+					  <p class="campaign-description">Fotomaraton Beyoğlu'nu keşfet</p>
+					  <a href="#" class="btn btn-primary" id="openModalBtn">Detaylar</a>
 					</div>
 				</div>
+
+				<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">FotoMaraton Beyoğlu Etkinliği</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+									<img src="./images/duyuru.png" alt="Resim 1" class="img-fluid mb-3">
+									<h2>📷 FotoMaraton Beyoğlu Etkinliği! 📷</h2>
+									<ul>
+										<li>
+											<p>
+												<b>Sevgili Fotoğraf Tutkunları,</b> <br> Beyoğlu'nun eşsiz atmosferini keşfetmeye
+												hazır mısınız? "FotoMaraton Beyoğlu" etkinliğimizle, şehrin kalbinde bir gün boyunca
+												fotoğrafçılığın keyfini çıkaracak, kreatif vizyonunuzu ortaya koyacak ve eşsiz anları
+												ölümsüzleştireceksiniz.
+											</p>
+										</li>
+										<li>
+											<p>
+												<b>Etkinlik Detayları:</b> <br>
+												🗓 Tarih: 11.12.2023 <br>
+												🕒 Saat: 10:00 <br>
+												📍 Toplanma Noktası: Atatürk Kültür Merkezi
+											</p>
+										</li>
+										<li>
+											<p>
+												<b>Katılım Şartları:</b> <br> Etkinlik ücretsizdir. <br>
+												Katılım sayısını sınırlamak adına önceden kayıt gereklidir.
+											</p>
+										</li>
+										<li>
+											<p>
+												<b>Nasıl Katılabilirsiniz?</b> <br>[Katılım Linki] üzerinden kayıt
+												olabilirsiniz.
+											</p>
+										</li>
+									</ul>
+							
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+								<a href="404.html" class="btn btn-primary" style="background-color: rgb(78, 162, 78);">Etkinliğe Katıl</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				<script>
+					// When the button is clicked, show the modal
+					document.getElementById('openModalBtn').addEventListener('click', function() {
+					  $('#myModal').modal('show');
+					});
+				</script>	
 				<!-- Kampanya 2 -->
 				<div id="duyuru" class="campaign-item">
 					<img src="images/duyuru4.png" alt="Kampanya 2">
 					<div class="campaign-content">
 						<p class="campaign-description">Başka bir kısa metin açıklaması burada olacak.</p>
-						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+						<a href="#" class="btn btn-primary" id="openModalBtn">Detaylar</a>
 					</div>
 				</div>
 	
@@ -245,7 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="images/duyuru3.png" alt="Kampanya 3">
 					<div class="campaign-content">
 						<p class="campaign-description">Üçüncü kampanya metin açıklaması.</p>
-						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+						<a href="#" class="btn btn-primary" id="openModalBtn">Detaylar</a>
 					</div>
 				</div>
 	
@@ -254,7 +318,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<img src="images/duyuru2.png" alt="Kampanya 4">
 					<div class="campaign-content">
 						<p class="campaign-description">Dördüncü kampanya metin açıklaması.</p>
-						<a href="blog2.html" class="btn btn-primary">Detaylar</a>
+						<a href="#" class="btn btn-primary" id="openModalBtn">Detaylar</a>
 					</div>
 				</div>
 			</div>
