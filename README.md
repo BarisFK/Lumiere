@@ -1,9 +1,9 @@
-# Lumiere
-Bu repo, fotoğrafçılık sektörüne yönelik profesyonel ekipmanların satışını sağlayan bir şirket için özel bir web sitesi tasarımını içerir.
+# About Lumiere
+This repository contains a custom website design for a company that sells professional equipment for the photography industry.
 
-- w3layouts aracılığıyla ücretsiz alınan şablon; HTML, CSS ve JavaScript kullanılarak geliştirilmiştir.
-- Kurumsal kimliğe uygun tasarım, kullanıcı dostu arayüz, fotoğrafçılık ekipmanlarını detaylı bir şekilde sergileyen galeri, etkileşimli öğeler ve daha fazlasını içeren özel özelliklere sahiptir.
-- Responsive tasarım sayesinde, kullanıcılar web sitesini farklı cihazlarda sorunsuz bir şekilde görüntüleyebilir.
-- Projenin çalışan bir demo versiyonunu https://barisfk.github.io/Lumiere üzerinden inceleyebilirsiniz.
+- The template, obtained for free through w3layouts, has been developed using HTML, CSS, and JavaScript, and given a new structure and appearance.
+- It features a design in line with corporate identity, a user-friendly interface, a gallery showcasing photography equipment in detail, interactive elements, and more.
+- Thanks to its responsive design, users can view the website seamlessly on different devices.
+- You can explore a working demo version of the project at https://barisfk.github.io/Lumiere.
 
 
